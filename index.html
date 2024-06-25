@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Math Formula</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Math Formula</h1>
+    </header>
+    <main>
+        <section id="create-formula">
+            <h2>Create Formula</h2>
+            <button onclick="createFormula()">Create Formula</button>
+        </section>
+        <section id="stored-formulas">
+            <h2>Your Stored Formulas</h2>
+            <div id="formulas-list">
+                <!-- This is where dynamically stored formulas will appear -->
+                Example:
+                <div class="formula-item">
+                    <h3>Formula Name</h3>
+                    <p>Formula: {x} + {y}</p>
+                    <button>Enable/Disable</button>
+                    <button>Delete</button>
+                </div>
+            </div>
+        </section>
+    </main>
+    <script src="app.js"></script>
+</body>
+</html>

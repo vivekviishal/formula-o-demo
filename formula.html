@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Math Formula</title>
+    <link rel="stylesheet" href="formula.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjs/10.0.0/math.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/fuse.js/dist/fuse.min.js"></script>
+
+</head>
+<body>
+    <header>
+        <h1>Math Formula</h1>
+    </header>
+    <div id="formula-info">
+        Set up formula to use CIF calculation with your bots. Enter the variables inside curly braces like {CIF_1}. <br>
+        All mathematical operations like [ + , - , * , % , ^ ] are supported.
+    </div>
+    <main>
+        <section id="create-formula">
+            <h2>Create Formula</h2>
+            <div id="input-formula">
+                <input type="text" id="formula" placeholder="{CIF_1} + {CIF_2}" onkeyup="detectCurlyBraces(event); showAutocomplete(event)">
+                <button onclick="validateFormula()">Validate</button>
+            </div>
+            <div id="dynamic-input-values"></div> <!-- Placeholder for dynamically created input values section -->
+            <div id="dynamic-result"></div> <!-- Placeholder for dynamically created result section -->
+        </section>
+        <section id="stored-formulas">
+            <h2>Your Stored Formulas</h2>
+            <table id="formulas-table" border="1">
+                <thead>
+                    <tr>
+                        <th width="20%">Formula ID</th>
+                        <th>Formula</th>
+                        <th width="20%">Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- This is where dynamically stored formulas will appear -->
+                    <tr>
+                        <td width="20%">1</td>
+                        <td>{x} + {y}</td>
+                        <td width="20%">
+                            <button onclick="deleteFormula(this)">Delete</button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+    </main>
+    <script src="formula.js"></script> <!-- Link to JavaScript for functionality -->
+</body>
+</html>
